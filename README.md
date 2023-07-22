@@ -1,4 +1,4 @@
-# Project Documentation: 10k-download
+# Project Documentation: Streamlined SEC Edgar 10-K Filings Downloader
 
 ## Table of Contents
 
