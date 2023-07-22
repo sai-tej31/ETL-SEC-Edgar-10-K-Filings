@@ -1,4 +1,5 @@
 import os
+from tqdm import tqdm
 
 
 class TickerFilesCollector:
@@ -11,6 +12,7 @@ class TickerFilesCollector:
         """
         self.root_folder = root_folder
         self.ticker_files = {}
+        self.total_tickers = 0  # Track the total number of tickers for tqdm
 
     def _collect_files(self, root_folder):
         """
@@ -58,7 +60,12 @@ class TickerFilesCollector:
             dict: A dictionary with company tickers as keys and lists of associated file paths as values.
         """
         try:
-            for folder in os.listdir(self.root_folder):
+            self.total_tickers = len(
+                os.listdir(self.root_folder)
+            )  # Get total number of tickers
+            for folder in tqdm(
+                os.listdir(self.root_folder), desc="Collecting Tickers", unit="ticker"
+            ):
                 ticker_folder = os.path.join(self.root_folder, folder)
                 if os.path.isdir(ticker_folder):
                     self.ticker_files.update(
