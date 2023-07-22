@@ -1,5 +1,6 @@
 import logging
 from sec_edgar_downloader import Downloader
+from tqdm import tqdm  # Import tqdm for the progress bar
 
 
 def get_ticker_10k_filings(ticker):
@@ -23,7 +24,8 @@ def get_ticker_10k_filings(ticker):
 
     try:
         # Get all 10-K filings for the specified ticker
-        dl.get("10-K", ticker)
+        # Use tqdm to add the progress bar
+        tqdm(dl.get("10-K", ticker), desc=f"Downloading 10-K filings for {ticker}")
     except Exception as e:
         # Log the error message along with the ticker symbol
         logging.error(
