@@ -28,7 +28,7 @@ class TickerFilesCollector:
         try:
             for root, _, files in os.walk(root_folder):
                 for file in files:
-                    if file.endswith(".txt") or file.endswith(".html"):
+                    if file.endswith(".txt") or file.endswith(".html") or file.endswith(".xml"):
                         collected_files.append(os.path.join(root, file))
         except Exception as e:
             print(f"Error occurred while collecting files: {e}")
