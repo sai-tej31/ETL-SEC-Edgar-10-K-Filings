@@ -27,13 +27,41 @@ The 10k-download project provides utilities for downloading, collecting, and org
 
 ## 2. Folder Structure <a name="2-folder-structure"></a>
 
-```plaintext
+My apologies for any frustration caused. Here's the output that you can directly copy-paste into your existing README.md file:
+
+```markdown
+## 2. Folder Structure <a name="2-folder-structure"></a>
+
+The project has the following folder structure:
+
+```
+(myenv) chitralpatil@Chitrals-MacBook-Pro 10k-download % ls
+data/
 myenv/
 playground.ipynb
 requirements.txt
 utils/
-|-- TickerFilesCollector.py
-|-- __init__.py
+```
+
+- **`data/`**: Directory for storing the downloaded 10-K filings.
+- **`myenv/`**: Virtual environment directory for managing project dependencies.
+- **`playground.ipynb`**: A Jupyter notebook for testing and usage examples.
+- **`requirements.txt`**: A text file containing required Python packages.
+- **`utils/`**: A directory containing utility modules.
+
+```
+(myenv) chitralpatil@Chitrals-MacBook-Pro utils % ls
+TickerFilesCollector.py
+__init__.py
+__pycache__
+collect_ticker_files.py
+get_ticker_10k_filings.py
+```
+
+- **`TickerFilesCollector.py`**: Module for collecting ticker files.
+- **`__init__.py`**: Initialization file for the `utils` package.
+- **`__pycache__`**: Directory for cached Python files.
+
 ```
 
 - **`myenv/`**: Virtual environment directory for managing project dependencies.
