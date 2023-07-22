@@ -21,7 +21,7 @@ def collect_ticker_files(data_folder="data/sec-edgar-filings"):
 
         # Print and return the collected files dictionary
         for ticker, ticker_files in all_ticker_files.items():
-            print(f"Files for {ticker}: {ticker_files}")
+            print(f"Files are ready for {ticker}")
 
         return all_ticker_files
 
