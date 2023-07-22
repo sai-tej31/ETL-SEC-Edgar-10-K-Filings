@@ -1,4 +1,4 @@
-# ETL for SEC Edgar 10-K Filings Downloader"
+# ETL for SEC Edgar 10-K Filings Downloader
 
 ## Table of Contents
 
